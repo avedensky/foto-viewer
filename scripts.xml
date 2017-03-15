@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<scripts>
+		<script>
+			<name>Delete Image</name>
+			<script_filename>delete_file.py</script_filename>			
+			<cmd>%script% %selected_file%</cmd>
+			<context_menu>true</context_menu>
+			<after_update>true</after_update>
+			<sctipt_exit_waiting>true</sctipt_exit_waiting>
+		</script>	
+		<script>
+			<name>Copy To</name>
+			<script_filename>copyto.py</script_filename>
+			<selected_filelist>filelist.txt</selected_filelist>
+			<cmd>%script% %selected_filelist%</cmd>
+			<context_menu>true</context_menu>
+			<after_update>true</after_update>
+			<sctipt_exit_waiting>true</sctipt_exit_waiting>
+		</script>		
+	</scripts>
+</document>

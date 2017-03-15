@@ -1,0 +1,21 @@
+For Update ImageList:
+
+0. Берем список файлов (original_filename) для обновления
+1. Запускаем Thread_update_imglst
+1.1 Итерируемся по списку
+1.2 Проверяем наличие файла на диске
+1.2.1 если True:
+1.2.1.1 crc_old = zzimgLst.findbyfilename(), находим crc_new для файла crc.calc_adler32 (filename)
+1.2.1.2 Сравниваем два значения
+1.2.1.3 Если не равны:
+1.2.1.3.1 находим index = zzimgLst.findImageByCRC (old_crc)
+1.2.1.3.2 удаляем из zzimgLst   imglst.pop[index]
+1.2.1.3.3 *вызываем zzimgLst.loadOneFile (filename, index)
+1.2.1.4 Если равны:
+1.2.1.4.1 new_img_info = GetInfoAboutFile (filename)
+1.2.1.4.2 update_fileinfo (findImageByCRC (old_crc),new_img_info)
+1.2.2 если False
+1.2.2.1 imglst.pop (findbyfilename (filename))
+
+
+*В zzimgLst.loadOneFile - переделываем, если определен index то вместо imglst.append (img_info) пишем imglst.insert (index,img_info)
