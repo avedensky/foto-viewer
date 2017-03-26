@@ -1,5 +1,5 @@
 # zzFotoViewer
-zzFotoViewer - Foto Viewer application. Wtrited for learning: wxPython, Multithreading, XML and Image processing.
+zzFotoViewer - Foto Viewer application. Writed for learning: wxPython, Multithreading, XML and Image processing.
 
 Requirements:
 python 2.6.1
